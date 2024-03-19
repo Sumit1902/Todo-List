@@ -9,6 +9,7 @@ function Add(){
         newEle.innerHTML=`${inputs.value} <i class="fa-solid fa-trash"></i>`;
         text.appendChild(newEle);
         inputs.value="";
+        newEle.addEventListener('click',()=>{newEle.style.textDecoration = 'line-through';});
         newEle.querySelector("i").addEventListener("click" , remove);
         function remove(){
             newEle.remove()
